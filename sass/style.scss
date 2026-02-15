@@ -302,10 +302,7 @@ footer {
     left: 7rem;
     box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
     transition: 2s ease-in-out;
-    // transition: 2s ease-in;
     transform: scale(1);
-
-    // background-color: rgba(59, 130, 246, 0.3);
     background-color: rgba(186, 85, 211, 0.396);
 
     
@@ -338,9 +335,8 @@ footer {
     opacity: 1; 
     position: relative;
     bottom: 10em;
-     box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
     transition: 2s ease-in-out;
-    // transition: 2s ease-in;
     transform: scale(1);
     background-color: rgba(186, 85, 211, 0.396);
 }
