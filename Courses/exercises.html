@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>آموزش ریاضی هشتم | تمرین و مثال</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script>
+    function toggleAnswer(id) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.style.display = el.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+<header>
+  <div class="top-row">
+    <div>
+      <div class="logo">آموزش ریاضی هشتم</div>
+      <div class="subtitle">تمرین‌های حل‌شده و تمرین برای حل</div>
+    </div>
+    <button class="toggle-theme" onclick="toggleTheme()">حالت شب / روز</button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="lessons.html">درس‌ها</a></li>
+      <li><a href="exercises.html" class="active">تمرین و مثال</a></li>
+      <li><a href="quiz.html">آزمون و درباره ما</a></li>
+    </ul>
+  </nav>
+  <div class="math-floating">
+    <span class="math-symbol">+</span>
+    <span class="math-symbol">−</span>
+    <span class="math-symbol">×</span>
+    <span class="math-symbol">÷</span>
+  </div>
+</header>
+
+<main>
+  <h1 class="section-title">تمرین‌های نمونه ریاضی هشتم</h1>
+
+  <section class="exercise">
+    <h3>تمرین ۱: عددهای صحیح</h3>
+    <p>
+      حاصل عبارت زیر را به دست آور:
+      <strong>−۵ + ۳ − ۴ + ۶</strong>
+    </p>
+    <button onclick="toggleAnswer('ans1')">نمایش / مخفی کردن پاسخ</button>
+    <div class="answer" id="ans1">
+      <p>
+        مرحله‌به‌مرحله:
+        <br>−۵ + ۳ = −۲
+        <br>−۲ − ۴ = −۶
+        <br>−۶ + ۶ = ۰
+        <br><strong>پاسخ نهایی: ۰</strong>
+      </p>
+    </div>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۲: معادله یک‌مجهولی</h3>
+    <p>
+      معادله زیر را حل کن:
+      <strong>۳x − ۵ = ۱۰</strong>
+    </p>
+    <button onclick="toggleAnswer('ans2')">نمایش / مخفی کردن پاسخ</button>
+    <div class="answer" id="ans2">
+      <p>
+        ۳x − ۵ = ۱۰
+        <br>۳x = ۱۵
+        <br>x = ۵
+        <br><strong>پاسخ: x = ۵</strong>
+      </p>
+    </div>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۳: مجموع زوایای چندضلعی</h3>
+    <p>
+      مجموع زوایای داخلی یک شش‌ضلعی را حساب کن.
+    </p>
+    <button onclick="toggleAnswer('ans3')">نمایش / مخفی کردن پاسخ</button>
+    <div class="answer" id="ans3">
+      <p>
+        فرمول: (n − ۲) × ۱۸۰
+        <br>n = ۶
+        <br>(۶ − ۲) × ۱۸۰ = ۴ × ۱۸۰ = ۷۲۰
+        <br><strong>پاسخ: ۷۲۰ درجه</strong>
+      </p>
+    </div>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۴: توان‌ها</h3>
+    <p>
+      مقدار عبارت زیر را به دست آور:
+      <strong>۲³ × ۲²</strong>
+    </p>
+    <button onclick="toggleAnswer('ans4')">نمایش / مخفی کردن پاسخ</button>
+    <div class="answer" id="ans4">
+      <p>
+        چون پایه‌ها مساوی‌اند، توان‌ها را جمع می‌کنیم:
+        <br>۲³ × ۲² = ۲⁵
+        <br>۲⁵ = ۳۲
+        <br><strong>پاسخ: ۳۲</strong>
+      </p>
+    </div>
+  </section>
+
+  <h2 class="section-title">تمرین برای حل توسط خودت</h2>
+
+  <section class="exercise">
+    <h3>تمرین ۵</h3>
+    <p>
+      بدون ماشین‌حساب، حاصل عبارت زیر را به دست آور:
+      <strong>−۷ − ۳ + ۱۰</strong>
+    </p>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۶</h3>
+    <p>
+      معادله زیر را حل کن:
+      <strong>۴x + ۲ = ۱۸</strong>
+    </p>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۷</h3>
+    <p>
+      مجموع زوایای داخلی یک پنج‌ضلعی را حساب کن.
+    </p>
+  </section>
+
+  <section class="exercise">
+    <h3>تمرین ۸</h3>
+    <p>
+      مقدار ۳² × ۳³ را به دست آور.
+    </p>
+  </section>
+</main>
+
+<footer>
+  بعضی تمرین‌ها حل‌شده‌اند و بعضی برای تمرین بیشتر خودت گذاشته شده‌اند.
+</footer>
+</body>
+</html>
+

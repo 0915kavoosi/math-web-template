@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>آموزش ریاضی هشتم | آزمون و درباره ما</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="top-row">
+    <div>
+      <div class="logo">آموزش ریاضی هشتم</div>
+      <div class="subtitle">آزمون کوتاه و معرفی طراح سایت</div>
+    </div>
+    <button class="toggle-theme" onclick="toggleTheme()">حالت شب / روز</button>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">خانه</a></li>
+      <li><a href="lessons.html">درس‌ها</a></li>
+      <li><a href="exercises.html">تمرین و مثال</a></li>
+      <li><a href="quiz.html" class="active">آزمون و درباره ما</a></li>
+    </ul>
+  </nav>
+  <div class="math-floating">
+    <span class="math-symbol">%</span>
+    <span class="math-symbol">Σ</span>
+    <span class="math-symbol">≈</span>
+    <span class="math-symbol">∞</span>
+  </div>
+</header>
+
+<main>
+  <h1 class="section-title">آزمون کوتاه ریاضی هشتم</h1>
+
+  <section class="quiz-box">
+    <div class="quiz-question">
+      <p>۱) حاصل −۵ + ۳ − ۴ + ۶ کدام است؟</p>
+      <label><input type="radio" name="q1" value="-2"> −۲</label>
+      <label><input type="radio" name="q1" value="0"> ۰</label>
+      <label><input type="radio" name="q1" value="4"> ۴</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>۲) در معادله ۳x − ۵ = ۱۰ مقدار x چند است؟</p>
+      <label><input type="radio" name="q2" value="3"> ۳</label>
+      <label><input type="radio" name="q2" value="5"> ۵</label>
+      <label><input type="radio" name="q2" value="10"> ۱۰</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>۳) مجموع زوایای داخلی یک شش‌ضلعی چند درجه است؟</p>
+      <label><input type="radio" name="q3" value="540"> ۵۴۰</label>
+      <label><input type="radio" name="q3" value="720"> ۷۲۰</label>
+      <label><input type="radio" name="q3" value="900"> ۹۰۰</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>۴) مقدار ۲³ × ۲² کدام است؟</p>
+      <label><input type="radio" name="q4" value="16"> ۱۶</label>
+      <label><input type="radio" name="q4" value="32"> ۳۲</label>
+      <label><input type="radio" name="q4" value="64"> ۶۴</label>
+    </div>
+
+    <button class="primary" onclick="checkQuiz()">تصحیح آزمون</button>
+    <div class="quiz-result" id="quiz-result"></div>
+  </section>
+
+  <h2 class="section-title">درباره این سایت</h2>
+  <section class="about">
+    <p>
+      این سایت توسط یک دانش‌آموز پایه هشتم برای شرکت در جشنواره طراحی شده است.
+      هدف اصلی این بوده که ریاضی هشتم را از حالت خشک و ترسناک خارج کند و
+      با مثال‌های ساده، تمرین‌های مرحله‌به‌مرحله و آزمون‌های کوتاه، یادگیری را
+      لذت‌بخش‌تر کند.
+    </p>
+    <p>
+      در طراحی سایت سعی شده:
+    </p>
+    <ul>
+      <li>رنگ‌ها آرام و مناسب مطالعه باشند.</li>
+      <li>متن‌ها کوتاه، واضح و همراه با مثال باشند.</li>
+      <li>بین «درس»، «تمرین» و «آزمون» تعادل برقرار شود.</li>
+    </ul>
+    <p>
+      اگر این سایت را برای جشنواره می‌بینید، خوشحال می‌شویم نظر و پیشنهادتان
+      برای بهتر شدن آن را بگویید.
+    </p>
+
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar">۸</div>
+        <div>
+          <div><strong>طراح سایت:</strong> دانش‌آموز پایه هشتم</div>
+          <div style="font-size:12px;opacity:0.9;">علاقه‌مند به ریاضی، برنامه‌نویسی و طراحی</div>
+        </div>
+      </div>
+      <div class="profile-extra">
+        <p>
+          این پروژه با هدف ترکیب «ریاضی» و «فناوری» ساخته شده است؛
+          تا نشان دهد که می‌شود با خلاقیت، درس‌های سخت را هم جذاب کرد.
+        </p>
+        <p>
+          مهارت‌ها: HTML، CSS، JavaScript، حل مسئله، کار تیمی و ارائه.
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  امیدوارم این سایت قدمی کوچک برای دوست‌داشتنی‌تر شدن ریاضی باشد.
+</footer>
+</body>
+</html>
+

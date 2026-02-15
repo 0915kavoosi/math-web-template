@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: 'Vazirmatn', sans-serif;
+  background: #f5f7fb;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* حالت شب */
+
+body.dark {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+body.dark header {
+  background: linear-gradient(135deg, #111827, #1f2937);
+}
+
+body.dark .card-box,
+body.dark .lesson,
+body.dark .exercise,
+body.dark .quiz-box,
+body.dark .about,
+body.dark .hero,
+body.dark .hero-illustration .card {
+  background: #111827;
+  color: #e5e7eb;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.7);
+}
+
+body.dark .tag {
+  background: #1f2937;
+  color: #93c5fd;
+}
+
+body.dark .badge {
+  background: #1f2937;
+  color: #f9a8d4;
+}
+
+body.dark nav ul li a {
+  border-color: rgba(255,255,255,0.3);
+}
+
+/* هدر */
+
+header {
+  background: linear-gradient(135deg, #3f51b5, #5c6bc0);
+  color: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+header .top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+header .subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.5);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: #fff;
+  color: #3f51b5;
+}
+
+/* دکمه حالت شب */
+
+.toggle-theme {
+  border: 1px solid rgba(255,255,255,0.7);
+  background: transparent;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* انیمیشن نمادهای ریاضی در هدر */
+
+.math-floating {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.25;
+}
+
+.math-symbol {
+  position: absolute;
+  font-size: 26px;
+  animation: float 8s infinite ease-in-out;
+  color: rgba(255,255,255,0.7);
+}
+
+.math-symbol:nth-child(1) { top: 10px; right: 10%; animation-duration: 7s; }
+.math-symbol:nth-child(2) { top: 40px; left: 15%; animation-duration: 9s; }
+.math-symbol:nth-child(3) { bottom: 10px; right: 25%; animation-duration: 6s; }
+.math-symbol:nth-child(4) { bottom: 0; left: 5%; animation-duration: 10s; }
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 0.3; }
+  50% { transform: translateY(-12px); opacity: 0.8; }
+  100% { transform: translateY(0); opacity: 0.3; }
+}
+
+main {
+  max-width: 1100px;
+  margin: 25px auto 40px;
+  padding: 0 15px;
+}
+
+/* هیرو */
+
+.hero {
+  background: #fff;
+  border-radius: 18px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 20px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.hero-text h1 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #e8eaf6;
+  color: #3f51b5;
+}
+
+.hero-cta a {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffca28;
+  color: #333;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.hero-cta a:hover {
+  transform: translateY(-2px);
+}
+
+.hero-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-illustration .card {
+  background: linear-gradient(145deg, #3f51b5, #7e57c2);
+  color: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  width: 100%;
+  max-width: 280px;
+  box-shadow: 0 8px 20px rgba(63,81,181,0.4);
+}
+
+.hero-illustration h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.hero-illustration p {
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 0.95;
+}
+
+.section-title {
+  margin: 30px 0 15px;
+  font-size:20px;
+  font-weight: 700;
+  color: #303f9f;
+}
+
+/* کارت‌ها + افکت سه‌بعدی */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 15px;
+}
+
+.card-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-box:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  backface-visibility: hidden;
+}
+
+.card-face.back {
+  position: absolute;
+  inset: 0;
+  padding: 16px;
+  transform: rotateY(180deg);
+}
+
+.card-box h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.card-box p {
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.card-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 11px;
+  background: #e8eaf6;
+  color: #3f51b5;
+  padding: 3px 8px;
+  border-radius: 999px;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #fce4ec;
+  color: #c2185b;
+  margin-top: 6px;
+}
+
+/* درس‌ها */
+
+.lesson {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.lesson h2 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #303f9f;
+}
+
+.lesson h3 {
+  font-size: 15px;
+  margin: 10px 0 5px;
+}
+
+.lesson p,
+.lesson li {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.lesson ul {
+  margin-right: 18px;
+  margin-top: 5px;
+}
+
+/* نکته طلایی */
+
+.tip-box {
+  margin-top: 10px;
+  background: #fff8e1;
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 13px;
+  border: 1px dashed #ffb300;
+}
+
+.tip-title {
+  font-weight: 600;
+}
+
+.tip-content {
+  margin-top: 6px;
+  display: none;
+}
+
+/* تمرین‌ها */
+
+.exercise {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.exercise h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+}
+
+.exercise p {
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.exercise .answer {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #1b5e20;
+  display: none;
+}
+
+.exercise button {
+  margin-top: 6px;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: none;
+  background: #3f51b5;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* چالش روز */
+
+.challenge-box {
+  background: #e3f2fd;
+  border-radius: 16px;
+  padding: 16px;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+body.dark .challenge-box {
+  background: #1d283a;
+}
+
+/* آزمون */
+
+.quiz-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.quiz-question {
+  margin-bottom: 12px;
+}
+
+.quiz-question p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.quiz-question label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.quiz-result {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* انیمیشن نتیجه آزمون */
+
+.quiz-result.animate {
+  animation: pop 0.5s ease-out;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+button.primary {
+  margin-top: 10px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #ffca28;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* درباره ما */
+
+.about {
+  background: #fff;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* کارت معرفی طراح */
+
+.profile-card {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  border-radius: 18px;
+  padding: 16px;
+  color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.profile-card:hover {
+  transform: translateY(-3px);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20
+px;
+}
+
+.profile-extra {
+  margin-top: 10px;
+  display: none;
+  font-size: 13px;
+}
+
+/* نوار پیشرفت */
+
+.progress-container {
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  border-radius: 999px;
+  background: #e0e7ff;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #3b82f6, #22c55e);
+  transition: width 0.4s;
+}
+
+/* ماشین‌حساب */
+
+.calculator {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  max-width: 320px;
+}
+
+.calculator input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+
+.calculator-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.calculator button {
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.calculator button.op {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.calculator button.equal {
+  background: #22c55e;
+  color: #fff;
+}
+
+/* فوتر */
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* ریسپانسیو */
+
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
