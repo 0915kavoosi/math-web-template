@@ -71,6 +71,16 @@ nav {
     transition: transform 0.2s, background-color 0.2s;
 }
 
+
+.cta-button2 {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
 .cta-button:hover {
     background-color: var(--secondary-color);
     transform: translateY(-2px);
@@ -302,6 +312,7 @@ footer {
     left: 7rem;
     box-shadow: 10px 10px 5px rgba(0,0,0,0.05);
     transition: 2s ease-in-out;
+
     transform: scale(1);
     background-color: rgba(186, 85, 211, 0.396);
 
@@ -367,122 +378,55 @@ footer {
     height: 3rem;
     border-radius: 100%;
 }
-/* ============================
-   ریسپانسیو حرفه‌ای موبایل
-   ============================ */
-
-@media (max-width: 992px) {
-  nav {
-    padding: 1rem;
-  }
-
-  .cta-button {
-    display: none; /* دکمه بزرگ در موبایل حذف می‌شود */
-  }
+/* دکمه منوی موبایل */
+.mobile-menu-btn {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
 }
 
-/* موبایل */
+/* فقط در موبایل نمایش داده شود */
 @media (max-width: 768px) {
+    
+    // .cta-button2 {
+    //     display: flex;
+    //     justify-content: flex-end;
+    //     position: relative;
+    //     right: 35rem;
+    //     bottom: 7rem;
+    // }
 
-  /* هدر */
+
+  .mobile-menu-btn {
+    display: flex;
+    color: var(--secondary-color);
+    // position: relative;
+    left: 23rem;
+  }
+
+  /* منو در حالت بسته */
+  .nav-links {
+    display: none;
+    // opacity: 0;
+    flex-direction: column;
+    gap: 0.2rem;
+    background: white;
+    padding: 1.5rem;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+
+  /* وقتی checkbox فعال شد → منو باز شود */
+  #mobile-menu:checked ~ .nav-links {
+    display: list-item;
+  }
+
   nav {
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
   }
-
-  .nav-links {
-    display: none; /* چون منوی تو با checkbox باز می‌شود */
-  }
-
-  /* هرو */
-  .hero {
-    flex-direction: column-reverse;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .math-shape {
-    width: 200px;
-    height: 200px;
-    font-size: 2.5rem;
-  }
-
-  /* کارت‌ها */
-  .grid {
-    grid-template-columns: 1fr;
-    padding: 0 1rem;
-  }
-
-  .card {
-    padding: 1.5rem;
-  }
-
-  /* آمار */
-  .stats-grid {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .stat-item h3 {
-    font-size: 2rem;
-  }
-
-  /* منوهای بازشو */
-  .menu-list,
-  .menu_mylist {
-    left: 0 !important;
-    right: 0 !important;
-    margin: 0 auto;
-    width: 90%;
-    font-size: 1.2rem;
-  }
-
-  .title_menu,
-  .title_item {
-    left: 0 !important;
-  }
-
-  .naBar a {
-    left: 0 !important;
-  }
-
-  /* تصاویر شبکه‌های اجتماعی */
-  .lego_shad,
-  .lego_eitaa,
-  .lego_telegram {
-    height: 2.2rem;
-    right: 0 !important;
-  }
 }
-
-/* موبایل خیلی کوچک */
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .math-shape {
-    width: 160px;
-    height: 160px;
-    font-size: 2rem;
-  }
-
-  .card {
-    padding: 1rem;
-  }
-
-  footer {
-    font-size: 0.9rem;
-  }
-}
-
-
 
