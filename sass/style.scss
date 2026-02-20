@@ -1,5 +1,5 @@
 @import "colors";
-
+@import "_font";
 * {
     box-sizing: border-box;
     margin: 0;
@@ -429,4 +429,84 @@ footer {
     gap: 1rem;
   }
 }
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+    position: relative;
+    bottom: 0.5rem;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.link_survey {
+    outline: none;
+    color: white;
+    position: relative;
+    top: 1rem;
+    text-decoration: none;
+    font-family: label-font;
+}
+@font-face {
+    font-family: label-font;
+    font-weight: 800;
+    font-style: normal;
+    src: url("../_font/Vazirmatn/static/Vazirmatn-Regular.ttf");
+}

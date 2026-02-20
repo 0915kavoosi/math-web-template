@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نظرسنجی شاد</title>
+    <link rel="stylesheet" href="./_survey_style.css">  
+</head>
+<body>
+    <div class="survey-container">
+        <h1>نظرسنجی وب سایت</h1>
+        <form>
+            <div class="question">
+                <label for="name">نام شما:</label>
+                <input type="text" id="name" placeholder="نام خود را وارد کنید..." required>
+    </div>
+    <div class="question">
+        <label for="feedback">نظرتان چیست؟</label>
+        <textarea id="feedback" rows="4" placeholder="نظرات خود را بنویسید..." required></textarea>
+    </div>
+    <div class="question">
+        <label for="satisfaction">چقدر از ما راضی هستید؟</label>
+        <select id="satisfaction" required>
+        <option value="">انتخاب کنید...</option>
+        <option value="بسیار راضی">بسیار راضی</option>
+        <option value="راضی">راضی</option>
+        <option value="ناراضی">ناراضی</option>
+        </select>
+    </div>
+    <div class="question">
+        <label for="improvement">نظرات و پیشنهادات خود را بیان کنید:</label>
+        <textarea id="improvement" rows="4" placeholder="پیشنهادات خود را اینجا بنویسید..." required></textarea>
+    </div>
+
+    <div class="question">
+        <label for="features">کدام ویژگی‌های جدید را دوست دارید اضافه کنید؟</label>
+        <textarea id="features" rows="4" placeholder="ویژگی‌های مورد نظر خود را بنویسید..." required></textarea>
+    </div>
+
+            <input type="submit" value="ارسال نظر">
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+@font-face {
+    font-family: base-font;
+    font-weight: 700;
+    font-style: normal;
+    src: url('../_font/Bodoni_Moda/static/BodoniModa_9pt-BlackItalic.ttf')
+}
+@font-face {
+    font-family: label-font;
+    font-weight: 800;
+    font-style: normal;
+    src: url('../_font/Luckiest_Guy/LuckiestGuy-Regular.ttf');
+}
+html{
+   background: rgba(153, 50, 204, 0.181);
+}
+ body { 
+    font-family: label-font;
+    /* background-color: #ffe5b4;  */
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+ }
+
+ .survey-container {
+    font-family: label-font;
+
+    /* background: linear-gradient(145deg, #ffcccb, #ffeb3b);  */
+    background: linear-gradient(145deg, #93b7f9, #b4faff); 
+
+    border-radius: 20px;
+    /* box-shadow: 15px 15px 30px #d1a9a0, -15px -15px 30px #ffffff; */
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    animation: slideIn 0.5s ease forwards;
+ }
+
+ h1 {
+    font-family: label-font;
+    text-align: center;
+    color: #ff5722;
+    /* font-family: base-font; */
+
+ }
+
+ .question {
+    margin: 1rem 0;
+ }
+
+ label {
+    font-family: label-font;
+
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #4a148c; 
+ }
+
+ input[type="text"], input[type="submit"], select, textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ff5722;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    font-family: label-font;
+
+ }
+
+ input[type="text"]:focus, select:focus, textarea:focus {
+    border-color: #ff9800;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5);
+ }
+
+ input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    margin-top: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+ }
+
+ input[type="submit"]:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+ }
+
+ @keyframes slideIn {
+    from {
+    transform: translateY(-50px);
+    opacity: 0;
+ }
+ to {
+    transform: translateY(0);
+    opacity: 1;
+    }
+ }
+
+
+/* ------------------------- */
+/*        ریسپانسیو         */
+/* ------------------------- */
+
+@media (max-width: 480px) {
+    .survey-container {
+        padding: 18px;
+        margin: 20px;
+    }
+    .survey-container h1 {    
+        font-size: 20px;
+    }   
+    .question label {
+
+        font-size: 14px;
+    }
+    .question input,
+    .question textarea,  
+    .question select {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input[type="submit"] {
+    font-size: 16px;
+    padding: 12px;
+  }
+}   
